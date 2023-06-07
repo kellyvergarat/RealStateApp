@@ -1,0 +1,42 @@
+﻿<Window x:Class="RealStateManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RealStateManagement"
+        mc:Ignorable="d"
+        Title="Real Estate System" Height="422" Width="600">
+    <Canvas Background="White">
+        <TextBlock Text="Real Estate System" FontSize="24" FontWeight="Bold"
+                   HorizontalAlignment="Left" Foreground="#FF12A1B2"
+                   Canvas.Left="195" Canvas.Top="26" VerticalAlignment="Top" />
+
+        <Label Content="Username:" Canvas.Left="162" Canvas.Top="97" />
+        <TextBox x:Name="txtUsername" Canvas.Left="272" Canvas.Top="107" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" />
+
+        <Label Content="Password:" Canvas.Left="162" Canvas.Top="147" />
+        <PasswordBox x:Name="txtPassword" Canvas.Left="272" Canvas.Top="157" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" />
+
+        <CheckBox x:Name="chkShowPassword" Content="Show Password"
+                  Canvas.Left="282" Canvas.Top="180" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+        <Button x:Name="loginBtn" Content="Login"
+                Canvas.Left="193" Canvas.Top="230"
+                Width="91" Background="#FF12A1B2" Foreground="White" Height="28" Click="loginBtn_Click" />
+
+        <Button x:Name="clearBtn" Content="Clear"
+                Canvas.Left="310" Canvas.Top="230"
+                Width="85" Background="#FF12A1B2" Foreground="White"
+                Click="clearBtn_Click" Height="28" />
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center"
+                    Canvas.Left="225" Canvas.Top="288" VerticalAlignment="Top">
+            <TextBlock Text="Don't have an account?" />
+            <Button x:Name="goRegistrationBtn" Content="Go to registration"
+                    Background="#FF12A1B2" Foreground="White"
+                    Click="goRegistrationBtn_Click" />
+        </StackPanel>
+
+        <!-- TextBox controls to replace PasswordBox controls when "Show Password" is checked -->
+    </Canvas>
+</Window>
